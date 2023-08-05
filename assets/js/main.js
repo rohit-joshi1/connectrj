@@ -1,10 +1,3 @@
-/**
-* Template Name: MyResume
-* Updated: Jun 13 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -198,6 +191,39 @@
     }
 
   });
+
+ /**
+   * Skills isotope and filter
+   */
+ window.addEventListener('load', () => {
+  let portfolioContainer = select('.skills-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.skills-item'
+    });
+
+    let portfolioFilters = select('#skills-flters li', true);
+
+    on('click', '#skills-flters li', function(e) {
+      e.preventDefault();
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+    }, true);
+
+    const defaultSkill = select('#skills-flters li.filter-active', true);
+    defaultSkill[0].click();
+  }
+
+});
 
   /**
    * Initiate portfolio lightbox 
