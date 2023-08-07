@@ -28,6 +28,23 @@
   }
 
   /**
+  *
+  */
+  const printresume = () => {
+      var mywindow = window.open();
+      var content = document.getElementById('resume').children[0].innerHTML;
+      content = content.replace("Resume", "Rohit Joshi").replace("bx bx-download", "");
+      var realContent = document.body.innerHTML;
+      mywindow.document.write(content);
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+      mywindow.print();
+      document.body.innerHTML = realContent;
+      mywindow.close();
+      return true;
+  }
+  
+  /**
    * Easy on scroll event listener 
    */
   const onscroll = (el, listener) => {
