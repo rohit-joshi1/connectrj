@@ -35,7 +35,11 @@
       var content = document.getElementById('resume').children[0].innerHTML;
       content = content.replace("Resume", "Rohit Joshi").replace("bx bx-download", "");
       var realContent = document.body.innerHTML;
+      mywindow.document.write('<html><head><title></title>');
+      mywindow.document.write( "<link rel=\"stylesheet\" href=\"assets/css/style.css\" type=\"text/css\" media=\"print\"/>" );
+      mywindow.document.write('</head><body >');
       mywindow.document.write(content);
+      mywindow.document.write('</body></html>');
       mywindow.document.close(); // necessary for IE >= 10
       mywindow.focus(); // necessary for IE >= 10*/
       mywindow.print();
