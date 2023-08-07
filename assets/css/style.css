@@ -574,6 +574,15 @@ section {
   margin-bottom: 10px;
 }
 
+.resume .resume-item h6 {
+  font-size: 10px;
+  background: #f7f8f9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
@@ -873,7 +882,7 @@ section {
 .services .icon-box p {
   line-height: 24px;
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .services .icon-box:hover {
@@ -1239,5 +1248,8 @@ section {
   display: none;
 }
 .tags{
-  margin-top: 10px;
+  margin: 0;
+}
+h6 i{
+  margin-right: 5px;
 }
