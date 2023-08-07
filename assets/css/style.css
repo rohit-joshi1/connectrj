@@ -103,6 +103,9 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+  #hero{
+    background-size: 400px;
+  }
 }
 
 /*--------------------------------------------------------------
