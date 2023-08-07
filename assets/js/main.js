@@ -28,7 +28,7 @@
   }
 
   /**
-  *
+  * Print resume function
   */
   const printresume = () => {
       var mywindow = window.open();
@@ -43,6 +43,9 @@
       mywindow.close();
       return true;
   }
+  on('click', '#resume .section-title a', function(e) {
+    printresume();
+  })
   
   /**
    * Easy on scroll event listener 
