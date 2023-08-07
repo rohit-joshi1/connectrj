@@ -104,7 +104,7 @@ h6 {
     transition-delay: 0 !important;
   }
   #hero{
-    background-size: 400px;
+    background-size: 400px !important;
   }
 }
 
